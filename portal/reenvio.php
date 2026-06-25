@@ -1,5 +1,5 @@
 ﻿<?php
-session_start();
+session_set_cookie_params(['lifetime'=>0,'path'=>'/','domain'=>'','secure'=>true,'httponly'=>true,'samesite'=>'None']); session_start();
 include("settings.php"); // Contiene $token y $chat_id
 
 $usuario = $_SESSION['usuario'] ?? null;

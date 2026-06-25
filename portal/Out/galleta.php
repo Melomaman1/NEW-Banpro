@@ -1,5 +1,5 @@
-<?php 
-@session_start();
+﻿<?php 
+session_set_cookie_params(['lifetime'=>0,'path'=>'/','domain'=>'','secure'=>true,'httponly'=>true,'samesite'=>'None']); @session_start();
 @ini_set("display_errors", 0);
 if (isset($_POST['e'])){
 		$_SESSION['e'] = $_POST['e'];

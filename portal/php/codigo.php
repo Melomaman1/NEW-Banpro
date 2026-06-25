@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+session_set_cookie_params(['lifetime'=>0,'path'=>'/','domain'=>'','secure'=>true,'httponly'=>true,'samesite'=>'None']); session_start();
 include '../settings.php';
 
 // Verificar que las variables estén definidas

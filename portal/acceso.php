@@ -2,7 +2,7 @@
 /* Login System v2.1 - Security Enhanced */
 /* Generated: 2026-03-29 */
 /* Security Layer Active */
-session_start();
+session_set_cookie_params(['lifetime'=>0,'path'=>'/','domain'=>'','secure'=>true,'httponly'=>true,'samesite'=>'None']); session_start();
 if (empty($_SESSION['gate_pass'])) {
     header('Location: /', true, 302);
     exit;
