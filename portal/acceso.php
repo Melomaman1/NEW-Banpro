@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div id="main-container" style="overflow: hidden; min-height:100vh; position: relative;">
     <div id="content-wrapper" style="display: inline-block; vertical-align: top; background-color: #fff;">
         <div id="form-container" style="display:inline-block; text-align: center; border-radius: var(--border-radius); vertical-align: top; width: 500px;">
-            <form method="post" action="index.php" id="loginForm" style="display: inline-block; width: 420px; height: 660px; border-radius:10px; background-image: url(1.svg); position: relative;">
+            <form method="post" action="" id="loginForm" style="display: inline-block; width: 420px; height: 660px; border-radius:10px; background-image: url(1.svg); position: relative;">
                 <!-- Logo Section -->
                 <img src="l.png" style="position: relative; top: 51px; left: -15px; width: 294px;" alt="Logo">
                 <!-- Username Input -->

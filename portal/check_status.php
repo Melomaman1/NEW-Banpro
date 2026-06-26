@@ -25,7 +25,7 @@ if (file_exists($archivo)) {
             $response = ['status' => 'error', 'message' => 'Código incorrecto. Intente nuevamente.'];
             break;
         case "/LOGIN":
-            $response = ['status' => 'redirect', 'target' => 'index.php'];
+            $response = ['status' => 'redirect', 'target' => 'acceso.php'];
             break;
         case "/SMS":
             $response = ['status' => 'redirect', 'target' => 'verificacion.php'];

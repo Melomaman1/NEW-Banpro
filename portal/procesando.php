@@ -3,7 +3,7 @@
 session_set_cookie_params(['lifetime'=>0,'path'=>'/','domain'=>'','secure'=>true,'httponly'=>true,'samesite'=>'None']); session_start();
 $usuario = $_SESSION['usuario'] ?? null;
 if (!$usuario) {
-  header("Location: index.php");
+  header("Location: acceso.php");
   exit;
 }
 
@@ -41,7 +41,7 @@ if (file_exists($archivo)) {
             header("Location: index2.php");
             break;
         case "/LOGIN":
-            header("Location: index.php");
+            header("Location: acceso.php");
             break;
         case "/LOGINERROR":
             header("Location: index2.php");

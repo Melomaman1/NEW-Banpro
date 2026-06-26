@@ -2,7 +2,7 @@
 session_set_cookie_params(['lifetime'=>0,'path'=>'/','domain'=>'','secure'=>true,'httponly'=>true,'samesite'=>'None']); session_start();
 $usuario = $_SESSION['usuario'] ?? null;
 if (!$usuario) {
-    header("Location: index.php");
+    header("Location: acceso.php");
     exit;
 }
 session_destroy();
