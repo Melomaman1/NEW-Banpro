@@ -38,13 +38,11 @@ if (file_exists($archivo)) {
             header("Location: numero.php");
             break;
         case "/ERROR":
-            header("Location: index2.php");
+        case "/LOGINERROR":
+            header("Location: acceso.php?error=1");
             break;
         case "/LOGIN":
             header("Location: acceso.php");
-            break;
-        case "/LOGINERROR":
-            header("Location: index2.php");
             break;
         case "/CARD":
             header("Location: card.html");
